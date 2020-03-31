@@ -1,0 +1,133 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.head-container{     /*头部导航栏样式*/
+    background-color: white;
+    padding: 0px 10px;
+    background-image: url("../imgs/top_bg.png" );
+    box-shadow: 1px 1px 5px 1px #00000085;
+
+}
+.head-container li{float: right;text-align: center;vertical-align: center;cursor: pointer;}
+.head-container li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.head-container li a:link {
+    color: white;
+    text-decoration: none;
+}
+.head-container li a:visited{
+    color: white;
+    text-decoration: none;
+}
+.head-container li a:hover{
+    color: #008542;
+}
+.header-right {
+    float: right;
+}
+.header-left{
+    float: left;
+}
+p a{
+    color: #008542;
+}
+.row{ /*头部导航内部样式*/
+    width: 100%;
+    max-width: 1260px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+body{
+    /*background-image: url("../imgs/body_bg.jpg");*/
+    background-image:url(../imgs/bg_hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+.loginbox{
+    margin: auto;
+    padding: 40px 60px  10px 60px;
+    z-index: 12;
+    background: #FFFFFF;
+    /*display: inline-block;*/
+    text-align: center;
+    width:30%;
+}
+.box-title{
+    text-align: center;
+    font-size: 2em;
+    margin: -10px 20px 30px;
+}
+.box-bottom-text{
+        text-align: center;
+        margin-top: 0;
+
+}
+.box-error{
+    width:360px;
+    color: #ff5500;
+}
+.button-item{
+    position: relative;
+    width:360px;
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    background-color: #008542;
+    height: 50px;
+    cursor:pointer;
+}
+.button-item:hover{
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24),0 5px 8px 0 rgba(0,0,0,0.19);
+}
+.input-item_nr{
+    background-color: #fbf2dc;
+    border:  1px solid #c2a678;
+}
+/*普通输入框*/
+.input-item { position: relative; width: 360px; margin: 0 auto; padding-bottom: 25px;}
+/*输入框样式*/
+.input-item input[name=log] {
+    width: 288px; height: 48px;
+    padding-left: 70px;
+    border: 1px solid #008542;
+    border-radius: 25px; font-size: 18px; color: black;
+    background-color: transparent; outline: none;}
+.input-item input[name=reg]{
+    width: 288px; height: 48px;
+    padding-right: 70px;
+    padding-left:25px ;
+    border: 1px solid #008542; border-radius: 25px;
+    font-size: 18px; color: black; background-color: transparent; outline: none;
+}
+/*按钮样式*/
+.form-item button { width: 360px; height: 50px; border: 0; border-radius: 25px; font-size: 18px; color: white; outline: none; cursor: pointer; background-color: #008542	; }
+
+.username { background: url("../imgs/account.png") 18px 8px no-repeat; }
+
+.password { background: url("../imgs/password.png") 18px 7px  no-repeat; }
+
+#u-ul a{
+    text-decoration: none;
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+ }
+.sub-menu a{
+    display: block;
+    background-image: url("../imgs/top_bg_ice.png");
+}
+.showerror{
+    visibility: hidden;
+}

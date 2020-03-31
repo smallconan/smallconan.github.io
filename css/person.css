@@ -1,0 +1,75 @@
+.person-info-edit{
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    float: right;
+    clear-after: both;
+    z-index: 12;
+}
+.person-info-block{
+    margin:10px 0;
+    padding-bottom: 10px;
+    border-bottom-style: dashed;
+    border-color: #008542;
+}
+.person-info-div{
+    clear: both;
+    border-top: #008542 solid 1px;
+}
+#person-space{
+    background-image: url("../imgs/bg_bottom.jpg");
+}
+
+.person-edit-choice{
+    float: left;
+    display: block;
+    text-align: center;
+    border: #dddddd 1px solid;
+}
+.person-edit-choice li a{display: block;margin: 10px 0;}
+.person-edit-choice li a:visited{color: black}
+.person-edit-choice li a:hover{color: #008542;cursor: pointer;}
+.person-edit-display{
+    float: left;
+    border: #dddddd 1px solid;
+    display: block;
+    margin-left: 30px;
+}
+.title-bar-short{
+    width: 100px;
+    height: 35px;
+    color: #FFFFFF;
+    background-image: url("../imgs/title_bg_short.png");
+    text-align: left;
+    font-size: 1.5em;
+    padding-left: 50px;
+    margin: 0;
+}
+.title-bar-long{
+    width: 458px;
+    height: 35px;
+    color: #FFFFFF;
+    background: url("../imgs/title_bg_long.png") left no-repeat;
+    background-size: 960px 35px;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 50px;
+    font-size: 1.5em;
+    margin: 0;
+}
+.mb-bar li{
+    display: inline;
+}
+li a{
+    text-align: center;
+    text-decoration: none;
+}
+.mb-bar li a:link{color: black}
+.mb-bar li a:visited{color: black}
+.mb-bar li a:hover{color: #008542;}
+ul.mb-bar li+li:before{padding: 8px;color: #008542;content: "›";}
+.mb-bar{
+    margin-bottom: 10px;
+}
+.tdl{
+    padding: 0 100px 10px 50px;
+}
