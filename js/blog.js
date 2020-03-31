@@ -3,7 +3,7 @@ $(".head-container").append(
     "        <div class=\"header-right\">\n" +
     "                    <ul>\n" +
     "                            <li><a  href=\"\\blog\">博客</a></li>\n" +
-    "                            <li><a href=\"dailyarticle.html\">每日一文</a></li>\n" +
+    "                            <li><a href=\"\\dailyarticle\">每日一文</a></li>\n" +
     "                            <li><a href=\"\\blog\\share\">分享</a></li>\n" +
     "                       </ul>\n" +
     "                </div>\n" +
