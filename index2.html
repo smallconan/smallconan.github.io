@@ -1,0 +1,102 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>只影何归</title>
+    <link href="css/mycss.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <script src="js/jquery_2.1.4.js"> </script>
+</head>
+<body>
+<div class="head-container" ></div>
+<!--天气div-->
+<div id="tp-weather-widget"></div>
+<script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+        flavor: "bubble",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "zh-Hans",
+        unit: "c",
+        theme: "auto",
+        token: "d23f7ae9-baaf-46c5-9848-074161191762",
+        hover: "enabled",
+        container: "tp-weather-widget"
+    })
+</script>
+<!--<div class="slogan">
+            <img src="imgs/slogan.png">
+    </div>-->
+ <!--   <div class="music-player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=50% height=86 src="//music.163.com/outchain/player?type=2&id=32857153&auto=0&height=66"></iframe>
+    </div>-->
+<!--<div style="clear-after: both" class="contain-block" id="main-html">
+    <div class="border-top"></div>
+    <div class="border_left">
+        <div class="border_right">
+            <div class="sub-contain-block">
+          <div class="sub-title">
+              <span style="font-size: 2.5em">诗词</span><span style="font-size: 1.2em">是一种习惯,诉心中喜悲怒骂怨</span>
+          </div>
+          <div class="code-container">
+              <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+              <div style="text-align:center" >
+                  <div id="s_title" style="font-size: 1.5em"></div>
+                  <span id="s_dynasty" style="font-style: italic;font-size:1em"></span>
+                  <span id="s_author" style="font-style: italic;font-size:1em"></span>
+                  <div id="s_content" style="font-size: 1.8em;letter-spacing:3px;line-height:1.5em"></div>
+              </div>
+              <script type="text/javascript">
+                  jinrishici.load(function(result) {
+                      var content="";
+                      for(var i=0;i<result.data.origin.content.length;i++)
+                          content+=result.data.origin.content[i]+"<br>";
+                      document.getElementById("s_content").innerHTML=content;
+                      document.getElementById("s_title").innerHTML="《"+result.data.origin.title+"》";
+                      document.getElementById("s_author").innerHTML=result.data.origin.author;
+                      document.getElementById("s_dynasty").innerHTML="【"+result.data.origin.dynasty+"】";
+                  });
+              </script>
+          </div>
+    </div>
+            <div class="sub-contain-block">
+                 <div class="sub-title">
+                     <span style="font-size: 2.5em">阅读</span><span style="font-size: 1.2em">是一种方式,品人生酸甜苦辣咸</span>
+                 </div>
+                <div class="code-container">
+                    <div style="text-align:center"><span id="title" style="font-size: 2.0em;font-weight:bold"></span><br>
+                        <span id="author" style="font-size: 1.3em"></span>
+                    </div>
+                    <span id="digest" style="font-size:1.5em;font-style:italic;" ></span>
+                    <script>
+                        var time=localStorage.date;
+                        var xmlhttp=new XMLHttpRequest();
+                        var myObj;
+                        xmlhttp.onreadystatechange=function(){
+                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                myObj=JSON.parse(xmlhttp.responseText);
+                                document.getElementById("author").innerHTML=myObj.data.author;
+                                document.getElementById("title").innerHTML="《"+myObj.data.title+"》";
+                                document.getElementById("digest").innerHTML="“"+myObj.data.digest+"......”";
+                            }
+                        };
+                        xmlhttp.open("GET","https://interface.meiriyiwen.com/article/today?dev=1",true);
+                        xmlhttp.send();
+                    </script>
+                    <div  class="input-item">
+                       <br> <input id="submit" type="button"  name="g" class="button-item" value="阅 读 全 文" >
+                        <script>
+                            $("#submit").click(function () {
+                                window.open("dailyarticle.html")
+                            })
+                        </script>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="border-foot"></div>
+</div>-->
+</body>
+<script src="js/blog.js" type="text/javascript"></script>
+</html>
