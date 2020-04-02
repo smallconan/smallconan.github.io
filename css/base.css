@@ -17,3 +17,37 @@ body{
     line-height: 60px;
     cursor: pointer;
 }
+.box-container{
+    position: relative;
+    width: 120px;
+    height: 90px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11);
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.box{
+    padding: 10%;
+}
+.box-slogan{
+    margin: 5px;
+}
+.box-title{
+    white-space:nowrap;/*规定段落中的文本不换行*/
+    word-break:break-all;/*规定文本溢出时的动作*/
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;/*针对Opera浏览器*/
+    overflow: hidden;
+}
+.web-box{
+    position: absolute;
+    bottom: 5%;
+    width: 80%;
+    right: 10%;
+    left: 10%;
+    text-align: center;
+    vertical-align: middle;
+}
