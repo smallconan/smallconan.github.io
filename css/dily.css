@@ -1,0 +1,267 @@
+body{
+    background: #E3EDCD;
+}
+.code{
+    width:50%;
+    background: white;
+    position: relative;
+    left:25%;
+    margin-top: 8%;
+}
+.card {
+    transition: all 235ms ease 0s;
+    box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid #e6e7e9;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    will-change: transform;
+    word-wrap: break-word
+}
+.card:hover {
+    -webkit-transform: translate3d(0,2px,0);
+    transform: translate3d(0,2px,0);
+    box-shadow: 2px 8px 8px -5px rgba(0,0,0,.3)
+}
+.card .card-footer,
+.card .card-header {
+    background-color: rgba(0,0,0,.03);
+    padding: .75rem 1.25rem
+}
+.card .card-header {
+    border-bottom: 2px solid #e6e7e9
+}
+.card .card-footer {
+    border-top: 2px solid #e6e7e9
+}
+.card .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+.card .card-body .card-title,
+.card .card-body h4 {
+    margin-bottom: .5rem;
+    margin-top: 0
+}
+.card .card-body .card-subtitle,
+.card .card-body h5 {
+    color: #0071de;
+    margin-bottom: .5rem;
+    margin-top: 0
+}
+.card .card-body .card-text,
+.card .card-body p {
+    margin-bottom: 1rem;
+    margin-top: 0
+}
+.card .card-body .card-link + .card-link,
+.card .card-body a + a {
+    margin-left: 1.25rem
+}
+.card .image-bottom,
+.card .image-top,
+.card img {
+    border: 0;
+    border-radius: 0
+}
+.paper-btn,
+[type=button],
+button {
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    transition: all 235ms ease 0s;
+    box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+    transition: all 235ms ease-in-out 0s;
+    align-self: center;
+    background: 0 0;
+    border: 2px solid #41403e;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    outline: 0;
+    padding: .75rem
+}
+@media only screen and (max-width:520px) {
+    .paper-btn,
+    [type=button],
+    button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        text-align: center
+    }
+}
+.paper-btn.btn-large,
+[type=button].btn-large,
+button.btn-large {
+    transition: all 235ms ease 0s;
+    box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+    font-size: 2rem;
+    padding: 1rem
+}
+.paper-btn.btn-small,
+[type=button].btn-small,
+button.btn-small {
+    transition: all 235ms ease 0s;
+    box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+    font-size: .75rem;
+    padding: .5rem
+}
+.paper-btn.btn-block,
+[type=button].btn-block,
+button.btn-block {
+    display: block;
+    width: 100%
+}
+.paper-btn:hover,
+[type=button]:hover,
+button:hover {
+    -webkit-transform: translate3d(0,2px,0);
+    transform: translate3d(0,2px,0);
+    box-shadow: 2px 8px 8px -5px rgba(0,0,0,.3)
+}
+.paper-btn:focus,
+[type=button]:focus,
+button:focus {
+    border: 2px solid #0071de;
+    box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3)
+}
+.paper-btn:active,
+[type=button]:active,
+button:active {
+    border-color: rgba(0,0,0,.2);
+    transition: none
+}
+.paper-btn.disabled,
+.paper-btn[disabled],
+[type=button].disabled,
+[type=button][disabled],
+button.disabled,
+button[disabled],
+input.paper-btn[disabled],
+input[type=button][disabled],
+select.paper-btn[disabled],
+select[type=button][disabled],
+textarea.paper-btn[disabled],
+textarea[type=button][disabled] {
+    cursor: not-allowed;
+    opacity: .5
+}
+a {
+    background-image: linear-gradient(5deg,transparent 65%,#0071de 80%,transparent 90%),linear-gradient(165deg,transparent 5%,#0071de 15%,transparent 25%),linear-gradient(165deg,transparent 45%,#0071de 55%,transparent 65%),linear-gradient(15deg,transparent 25%,#0071de 35%,transparent 50%);
+    background-position: 0 90%;
+    background-repeat: repeat-x;
+    background-size: 4px 3px;
+    text-decoration: none
+}
+a:visited {
+    color: #41403e;
+    text-decoration: none
+}
+.alert-primary {
+    background-color: #c1c0bd;
+    border-color: #41403e;
+    color: #41403e
+}
+.paper-btn.btn-primary,
+[type=button].btn-primary,
+button.btn-primary {
+    background-color: #c1c0bd;
+    border-color: #41403e;
+    color: #fff
+}
+.paper-btn.btn-primary:hover:active,
+[type=button].btn-primary:hover:active,
+button.btn-primary:hover:active {
+    background-color: #a8a6a3
+}
+.alert-secondary {
+    background-color: #deefff;
+    border-color: #0071de;
+    color: #0071de
+}
+.paper-btn.btn-secondary,
+[type=button].btn-secondary,
+button.btn-secondary {
+    background-color: #deefff;
+    border-color: #0071de;
+    color: #41403e
+}
+.paper-btn.btn-secondary:hover:active,
+[type=button].btn-secondary:hover:active,
+button.btn-secondary:hover:active {
+    background-color: #abd6ff
+}
+.alert-success {
+    background-color: #d0dbc2;
+    border-color: #86a361;
+    color: #86a361
+}
+.paper-btn.btn-success,
+[type=button].btn-success,
+button.btn-success {
+    background-color: #d0dbc2;
+    border-color: #86a361;
+    color: #41403e
+}
+.paper-btn.btn-success:hover:active,
+[type=button].btn-success:hover:active,
+button.btn-success:hover:active {
+    background-color: #b7c9a1
+}
+.alert-warning {
+    background-color: #f5f0c6;
+    border-color: #ddcd45;
+    color: #ddcd45
+}
+.paper-btn.btn-warning,
+[type=button].btn-warning,
+button.btn-warning {
+    background-color: #f5f0c6;
+    border-color: #ddcd45;
+    color: #41403e
+}
+.paper-btn.btn-warning:hover:active,
+[type=button].btn-warning:hover:active,
+button.btn-warning:hover:active {
+    background-color: #ede49b
+}
+.alert-danger {
+    background-color: #f0cbc9;
+    border-color: #a7342d;
+    color: #a7342d
+}
+.paper-btn.btn-danger,
+[type=button].btn-danger,
+button.btn-danger {
+    background-color: #f0cbc9;
+    border-color: #a7342d;
+    color: #41403e
+}
+.paper-btn.btn-danger:hover:active,
+[type=button].btn-danger:hover:active,
+button.btn-danger:hover:active {
+    background-color: #e6a5a1
+}
+.alert-muted {
+    background-color: #e6e7e9;
+    border-color: #868e96;
+    color: #868e96
+}
+.paper-btn.btn-muted,
+[type=button].btn-muted,
+button.btn-muted {
+    background-color: #e6e7e9;
+    border-color: #868e96;
+    color: #41403e
+}
+.paper-btn.btn-muted:hover:active,
+[type=button].btn-muted:hover:active,
+button.btn-muted:hover:active {
+    background-color: #caced1
+}

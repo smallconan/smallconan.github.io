@@ -3,29 +3,33 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-image: url(https://open.saintic.com/api/bingPic?picsize=2);
+    margin: 0;
+    overflow-y: hidden;
 }
-.blog{
+.side-box{
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 0%;
     min-width: 60px;
     height: 60px;
-    background: white url(../img/blogging.png) no-repeat 15px 15px ;
     border-radius: 35px;
     float: right;
     clear: both;
     line-height: 60px;
     cursor: pointer;
 }
+.blog{
+    background: white url(../img/blogging.png) no-repeat 15px 15px ;
+}
+/*底部网站导航*/
 .box-container{
-    position: relative;
     width: 120px;
     height: 90px;
     transition: all 0.2s ease-in-out;
     border-radius: 4px;
     background: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11);
     float: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11);
     margin: 0 10px;
     cursor: pointer;
 }
@@ -50,4 +54,51 @@ body{
     left: 10%;
     text-align: center;
     vertical-align: middle;
+}
+.translate{
+    background: url("../img/translate.png") white no-repeat 6px 8px;
+}
+/*提示文本*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.div-holder{
+    background-color: #007aff;
+}
+.place-45{
+    min-height: 130px;
+}
+.article{
+    top: 30%;
+    position: relative;
+    left:10%;
+    width:80%;
+    background: white;
+    box-shadow:0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11) ;
 }
