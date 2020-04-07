@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>只影何归</title>
+    <link rel="stylesheet" href="css/trick.css">
     <link rel="stylesheet" href="css/dily.css">
-    <link href="css/search.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/APlayer.min.css">
+
     <script src="js/jquery_2.1.4.js" type="text/javascript"></script>
     <script src="js/search.js" type="text/javascript"></script>
     <script src="js/swiper.js"></script>
 
+
 </head>
 <body>
-<div class="swiper-container">
+<!-- Swiper -->
+<div class="swiper-container" id="sc1">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="clearfix">
+            <!--侧边工具栏-->
+            <div class="side-box-holder">
+                <!--占位DIV-->
                 <div class="place-45"></div>
+                <!--搜索框-->
                 <div id="search_bar" class="search_bar side-box" title="搜索">
-                    <span class="close" title="关闭搜索"></span>
-                    <form action="https://www.baidu.com/baidu" target="_blank">
-                        <input class="input"  type="text" name="wd" id="search" autocomplete="off"  >
-                        <!-- <input class="search_btn" type="submit" name="wd">-->
-                        <span class="search_ico"></span>
-                    </form>
-                </div >
-                <div class="blog side-box" title="我的博客"></div>
+                        <span class="close" title="关闭搜索"></span>
+                        <form action="https://www.baidu.com/baidu" target="_blank" method="get">
+                            <input class="input"  type="text" name="wd" id="search" autocomplete="off">
+                            <input class="search_btn" type="submit" name="wd" id="search-btn">
+                        </form>
+                        <span class="search_ico" title="搜索" id="search-ico"></span>
+                    </div>
+                <div class="side-box blog" title="我的博客"></div>
+                <!--翻译功能-->
                 <div class="side-box translate" title="翻译"></div>
+            </div>
+            <!--底部快捷导航栏-->
+            <div class="web-box-holder">
                 <div class="web-box">
                     <div class="box-container">
                         <div class="box" title="bilibili">
@@ -57,47 +70,54 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-slide" >
-            <div class="card code">
-                <div class="card-header">今日美文-<span style="font-style: italic">品人生酸甜苦辣咸</span></div>
-                <div class="card-body">
-                    <h3 id="title"  class="card-title" ></h3><br>
-                    <h4 id="author" class="card-subtitle"></h4><br>
-                    <p style="color: gainsboro;font-style: italic">内容提要:</p>
-                    <p id="digest" class="card-text"></p>
-                    <button id="read-more">阅读片段</button>
-                </div>
-                <div class="card-footer">版权归原作者所有</div>
-                <script>
-                    var time=localStorage.date;
-                    var xmlhttp=new XMLHttpRequest();
-                    var myObj;
-                    xmlhttp.onreadystatechange=function(){
-                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                            myObj=JSON.parse(xmlhttp.responseText);
-                            document.getElementById("author").innerHTML=myObj.data.author;
-                            document.getElementById("title").innerHTML="《"+myObj.data.title+"》";
-                            document.getElementById("digest").innerHTML="“"+myObj.data.digest+"......”";
-                        }
-                    };
-                    xmlhttp.open("GET","https://interface.meiriyiwen.com/article/today?dev=1",true);
-                    xmlhttp.send();
-                </script>
+        <div class="swiper-slide read">
+            <div id="#error" class="error"></div>
+            <div class="row flex-spaces child-borders yiyan" >
+                    <span  class="border border-primary contents " id="yiyan"></span>
+            </div>
+            <div class=" child-borders music" >
+                <embed border="0"
+                       marginwidth="0" marginheight="0"
+                       width="250" height="88"
+                       src="//music.163.com/outchain/player?type=3&id=2063206669&auto=0&height=66">
+            </div>
+            <div class="mw-holder child-borders child-shadows">
+                    <div class="swiper-container" id="sc2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" >
+                                <div class="mw">
+                                    <h4 id="mw-title" class="mw-title"></h4>
+                                    <h5 id="mw-author" class="mw-author"></h5>
+                                    <div id="mw-content" class=" mw-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" id="sw-bar"></div>
+                    </div>
             </div>
         </div>
     </div>
+    <!-- Add Pagination -->
 </div>
 
+<!-- Initialize Swiper -->
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-        direction: 'vertical',
-        height:window.innerHeight,
-        mousewheel:true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    })
+        var mySwiper1 = new Swiper('#sc1', {
+            direction: 'vertical',
+            nested: true,
+            mousewheel:true,
+        });
+
+        var swiper = new Swiper('#sc2', {
+            direction: 'vertical',
+            nested: true,
+            mousewheel: true,
+            scrollbar: {
+                el: '#sw-bar',
+            },
+        });
 </script>
 </body>
 <script src="js/base.js" type="text/javascript"></script>
+<script src="js/interface.js" type="text/javascript"></script>
 </html>

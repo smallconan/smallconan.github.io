@@ -9,12 +9,11 @@ $(function () {
             bar.attr("title","");
             inputs.focus();
         } else{/*是展开状态*/
-            alert("搜索");
-            inputs.val("");
-            bar.removeClass('search_open')
+            $("#search-btn").click();
         }
     });
     $(".close").click(function () {
+        inputs.val("");
         bar.removeClass('search_open');
     })
 });

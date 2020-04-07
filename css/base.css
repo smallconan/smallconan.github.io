@@ -1,15 +1,37 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
 body{
-    /*background-image: url("../imgs/body_bg.jpg");*/
     background-size: cover;
     background-attachment: fixed;
     background-image: url(https://open.saintic.com/api/bingPic?picsize=2);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     margin: 0;
-    overflow-y: hidden;
+    padding: 0;
+}
+.swiper-container {
+    height: 100%;
+}
+.swiper-slide{
+    overflow: auto;
+}
+.swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
 }
 .side-box{
     position: relative;
     margin-top: 30px;
-    width: 0%;
     min-width: 60px;
     height: 60px;
     border-radius: 35px;
@@ -19,7 +41,7 @@ body{
     cursor: pointer;
 }
 .blog{
-    background: white url(../img/blogging.png) no-repeat 15px 15px ;
+    background: white url(../img/blogging.png) no-repeat 14px 14px ;
 }
 /*底部网站导航*/
 .box-container{
@@ -46,11 +68,17 @@ body{
     -o-text-overflow:ellipsis;/*针对Opera浏览器*/
     overflow: hidden;
 }
-.web-box{
+.web-box-holder{
+    width: 100%;
+    float: left;
     position: absolute;
-    bottom: 5%;
+    bottom: 10px;
+}
+.web-box{
+    position: relative;
+    float: left;
+    bottom: 5px;
     width: 80%;
-    right: 10%;
     left: 10%;
     text-align: center;
     vertical-align: middle;
@@ -64,7 +92,6 @@ body{
     display: inline-block;
     border-bottom: 1px dotted black;
 }
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -77,9 +104,20 @@ body{
     position: absolute;
     z-index: 1;
 }
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+.side-box-holder{
+    width: 100%;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+.clearfix{
+    float: right;
+    position: absolute;
+    right: 5px;
 }
 .clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
     content: "";
@@ -101,4 +139,44 @@ body{
     width:80%;
     background: white;
     box-shadow:0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11) ;
+}
+.zcb-title{
+    position: relative;
+    width: 80%;
+    margin-top: 4%;
+    text-align: center;
+}
+.yiyan {
+    width: 80%;
+    position: absolute;
+    top:5px;
+}
+.yiyan .contents{
+    padding: 10px;
+}
+.read{
+    background:url("../img/read.png") repeat;
+}
+.music{
+    width: 80%;
+    position: absolute !important;
+    bottom: 0;
+    left: 5px!important;
+}
+.mw{
+    height: 100%;
+    float: left;
+}
+.mw-holder{
+    width: 80%;
+    height: 70%;
+}
+.mw-content{
+    padding: 20px;
+}
+.mw-title{
+    text-align: center;
+}
+.mw-author{
+    text-align: center;
 }
