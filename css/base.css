@@ -2,6 +2,10 @@ html, body {
     position: relative;
     height: 100%;
 }
+body::-webkit-scrollbar{
+    display: none;
+    overflow: scroll;
+}
 body{
     background-size: cover;
     background-attachment: fixed;
@@ -13,8 +17,8 @@ body{
 .swiper-container {
     height: 100%;
 }
-.swiper-slide{
-    overflow: auto;
+.swiper-container::-webkit-scrollbar{
+    display: none;
 }
 .swiper-slide {
     /* Center slide text vertically */
@@ -28,6 +32,9 @@ body{
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
+}
+.scroll-warp{
+    overflow-y: scroll;
 }
 .side-box{
     position: relative;
@@ -115,16 +122,13 @@ body{
     top:10px;
 }
 .clearfix{
-    float: right;
-    position: absolute;
-    right: 5px;
+    display: inline-block;
 }
 .clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
     content: "";
     display: block;
     height: 0;
     clear:both;
-    visibility: hidden;
 }
 .div-holder{
     background-color: #007aff;
@@ -140,12 +144,6 @@ body{
     background: white;
     box-shadow:0 2px 4px rgba(0,0,0,0.13), 0 0 3px rgba(0,0,0,0.11) ;
 }
-.zcb-title{
-    position: relative;
-    width: 80%;
-    margin-top: 4%;
-    text-align: center;
-}
 .yiyan {
     width: 80%;
     position: absolute;
@@ -154,8 +152,14 @@ body{
 .yiyan .contents{
     padding: 10px;
 }
-.read{
+.read-light{
     background:url("../img/read.png") repeat;
+}
+.read-black{
+    background-color: black;
+}
+.eye-care{
+   line-height: normal;
 }
 .music{
     width: 80%;
@@ -165,7 +169,7 @@ body{
 }
 .mw{
     height: 100%;
-    float: left;
+    background-color:  #EAEAEF;
 }
 .mw-holder{
     width: 80%;
@@ -173,10 +177,104 @@ body{
 }
 .mw-content{
     padding: 20px;
+    line-height: 1.8em;
+    text-indent: 2em;
 }
 .mw-title{
     text-align: center;
 }
 .mw-author{
     text-align: center;
+    font-style: normal;
+}
+.mw-info{
+    width: 50%;
+    margin-bottom: 0;
+}
+.icon {
+    width: 2.5em; height: 2.5em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.mw-tools{
+    position: absolute;
+    float: right;
+    right: 5px;
+}
+.more-info{
+    position: absolute;
+    bottom: 0;
+    font-family: "YaHei Consolas Hybrid", serif;
+    font-style: italic;
+    font-size: 0.8em;
+    color: #8f8d89;
+}
+.mw-logo{
+    font-family: "KaiTi", cursive, sans-serif;
+    font-style: italic;
+    position: absolute;
+    font-size: 5em;
+    color: #EBECED;
+    float: left;
+    left: 2%;
+    top: 2%;
+}
+.zx-container{
+    width: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
+}
+.zx{
+    text-align: center;
+}
+.zx-holder{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.zhihu-box {
+    width: 30%;
+    margin: 0 1%;
+    text-align: left;
+    white-space:normal;
+    word-break:break-all;
+    overflow:hidden;
+    float: left;
+    position: relative;
+}
+.zx-box-holder{
+    width: 100%;
+    display: inline-block;
+}
+.zhihu-box-container{
+    width:72%;
+    padding: 0 0% 0 0%;
+}
+.zhihu-logo{
+    overflow: hidden;
+    width: 220px;
+    background: transparent url(https://daily.zhihu.com/img/new_home_v3/top_logo.png) no-repeat 0 13px;
+}
+.zhihu-slogan{
+    background: url("https://daily.zhihu.com/img/new_home_v3/slogan.png");
+}
+.zx-div{
+    padding: 2%;
+}
+.zx-box{
+    background: white;
+    width: 100%;
+    margin: 0 15%;
+}
+.wb{
+   background: white;
+    width: 100%;
+    text-align: center;
+}
+.wb a{
+    color: black;
+    background: none;
+}
+.wb a:hover{
+    color: #0071de;
 }

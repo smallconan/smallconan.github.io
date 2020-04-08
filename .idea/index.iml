@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="library" name="APlayer" level="application" />
+    <orderEntry type="library" name="all" level="application" />
   </component>
 </module>
