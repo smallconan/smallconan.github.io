@@ -35,3 +35,8 @@ function text_color() {
   }
 return color;
 }
+$(".bing").hover(function () {
+    $(".bing-info").show();
+},function () {
+    $(".bing-info").hide();
+});

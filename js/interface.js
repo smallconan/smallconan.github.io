@@ -75,3 +75,16 @@ $.ajax({
             errorThrown);
     }
 });
+/*必应美图*/
+$.ajax({
+    url: "https://v1.alapi.cn/api/bing",
+    type:'post',
+    data:{
+        "format":'json'
+    },
+    dataType: 'json',
+    async:true,
+    success:function (data) {
+        $("#bing").html("<span><a href='"+data.data.bing+"' target=\"_blank\">"+data.data.copyright+"</a></span>")
+    }
+});

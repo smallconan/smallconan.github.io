@@ -12,14 +12,14 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/APlayer.min.css">
 
-    <script src="https://at.alicdn.com/t/font_1716017_6h8nblupuon.js"></script>
+    <script src="//at.alicdn.com/t/font_1716017_dk710ckajq.js"></script>
     <script src="js/jquery_2.1.4.js" type="text/javascript"></script>
     <script src="js/search.js" type="text/javascript"></script>
     <script src="js/swiper.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
 
 </head>
-<body>
+<body id="main">
 
 <!-- Swiper -->
 <div class="swiper-container" id="sc1" style="overflow-y: scroll">
@@ -30,7 +30,6 @@
             <div class="side-box-holder">
                 <!--占位DIV-->
                 <div class="place-45"></div>
-
                 <!--搜索框-->
                 <div id="search_bar" class="search_bar side-box search_open" title="搜索">
                         <span class="close" title="关闭搜索"></span>
@@ -71,6 +70,19 @@
                             <div class="box-title">YouTube</div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!--图片版权-->
+            <div class="bing">
+                <div class="bing-info" style="display: none">
+                    <div id="bing">
+
+                    </div>
+                </div>
+                <div class="bing-logo">
+                    <svg class="icon" aria-hidden="true" style="right: 0;">
+                        <use xlink:href="#icon-bing"></use>
+                    </svg>
                 </div>
             </div>
         </div>

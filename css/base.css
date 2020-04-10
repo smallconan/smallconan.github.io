@@ -9,10 +9,10 @@ body::-webkit-scrollbar{
 body{
     background-size: cover;
     background-attachment: fixed;
-    background-image: url(https://open.saintic.com/api/bingPic?picsize=2);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("https://v1.alapi.cn/api/bing");
 }
 .swiper-container {
     height: 100%;
@@ -298,4 +298,29 @@ body{
 }
 .api{
     font-size: 0.8em;
+}
+.bing{
+    width: 10%;
+    float: right;
+    position: absolute;
+    color: gray;
+    right: 0;
+    bottom: 0;
+    padding: 1%;
+}
+.bing a{
+    background: none;
+    color:inherit;
+}
+.bing a:hover{
+    color: #007aff;
+}
+.bing-info{
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
+    padding: 2%;
+}
+.bing-logo{
+    cursor: pointer;
+    margin-top: 1%;
+    text-align: right;
 }
