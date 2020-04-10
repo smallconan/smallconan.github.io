@@ -63,8 +63,8 @@ $.ajax({
         {
             $("#re-sou").append(" <tr>\n" +
                 "                                <td>"+i+"</td>\n" +
-                "                                <td><a target='_blank' href='https://s.weibo.com/weibo?q="+data.data[i].hot_word+"'>"+data.data[i].hot_word+"</a></td>\n" +
-                "                                <td>"+data.data[i].hot_word_num+"</td>\n" +
+                "                                <td><a target='_blank' href='https://s.weibo.com/weibo?q="+data.data[i].hot_word+"&Refer=top'>"+data.data[i].hot_word+"</a></td>\n" +
+                "                                <td style='color: #"+text_color()[i].toString(16)+"'>"+data.data[i].hot_word_num+"</td>\n" +
                 "                            </tr>")
         }
     },

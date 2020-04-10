@@ -12,6 +12,8 @@
     -webkit-backface-visibility: hidden;
     background:white;
     border-radius: 35px;
+    display: block;
+    vertical-align: middle;
 }
 .input{
     position: absolute;
@@ -57,3 +59,7 @@
     z-index:-1;
 }
 #show{position:absolute; padding:20px}
+.search-logo{
+    width: 80%;
+    background: url("https://www.baidu.com/img/bd_logo1.png");
+}

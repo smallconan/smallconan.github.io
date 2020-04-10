@@ -25,3 +25,13 @@ function mouse_is_in(e,div) {
   var div_y_2 = div.offset().top+div.outerHeight();
   return !(x < div_x_1 || x > div_x_2 || y < div_y_1 || y > div_y_2);
 }
+function text_color() {
+  var begin=0Xff0000;
+  var gap=0X500;
+  var color= new Array(50);
+  color[0]=begin;
+  for(var i=1;i<50;i++){
+   color[i]=color[i-1]+gap;
+  }
+return color;
+}
