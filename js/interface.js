@@ -1,3 +1,4 @@
+/*每日一文*/
 $.ajax({
     url:'https://interface.meiriyiwen.com/article/today?dev=1',
     dataType:'json',
@@ -5,7 +6,7 @@ $.ajax({
     success:function (data) {
         $("#mw-title").text(data.data.title);
         $("#mw-author").text(data.data.author);
-        $("#digest").text(data.data.digest)
+        $("#digest").text(data.data.digest);
         $("#mw-content").html(data.data.content);
     },
     error:function(xhr,textStatus,errorThrown){
@@ -15,6 +16,7 @@ $.ajax({
             errorThrown);
     }
 });
+/*一言*/
 $.ajax({
     url: "https://v1.alapi.cn/api/hitokoto",
     type:'post',
@@ -22,9 +24,10 @@ $.ajax({
     async:true,
     success:function (data) {
         $("#yiyan").html("【一言】："+data.data.hitokoto+"\n" +
-            "<span style='text-align: right;font-style: italic'>——"+''+data.data.from+''+"</span>")
+            "<span style='text-align: right;font-style: italic'>——"+data.data.from+"</span>")
     }
 });
+/*知乎日报*/
 $.ajax({
     url:"https://v1.alapi.cn/api/zhihu/latest",
     type:'post',
@@ -36,7 +39,7 @@ $.ajax({
                 "                        <div class=\"card-body\">\n" +
                 "                            <h4 class=\"card-title\">"+data.data.stories[i].title+"</h4>\n" +
                 "                            <h5 class=\"card-subtitle\">"+data.data.stories[i].hint+"</h5>\n" +
-                "                            <button><a href='"+data.data.stories[i].url+"'>阅读</a></button>\n" +
+                "                            <button><a href='"+data.data.stories[i].url+"' target='_blank'>阅读</a></button>\n" +
                 "                        </div>\n" +
                 "                        <img alt='图片加载失败 请刷新重试' class=\"image-bottom\" src=\""+data.data.stories[i].images[0]+"\">\n" +
                 "                    </div>\n" +
@@ -51,6 +54,7 @@ $.ajax({
             errorThrown);
     }
 });
+/*微博热搜*/
 $.ajax({
     url:"https://v1.alapi.cn/api/new/wbtop",
     dataType:'json',

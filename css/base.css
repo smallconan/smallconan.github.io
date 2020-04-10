@@ -148,6 +148,7 @@ body{
     width: 80%;
     position: absolute;
     top:5px;
+    z-index: 2;
 }
 .yiyan .contents{
     padding: 10px;
@@ -219,6 +220,7 @@ body{
     float: left;
     left: 2%;
     top: 2%;
+    z-index:1;
 }
 .zx-container{
     width: 100%;
@@ -277,4 +279,23 @@ body{
 }
 .wb a:hover{
     color: #0071de;
+}
+.footer{
+    text-align: center;
+    color: white;
+    display: block;
+    vertical-align: middle;
+    padding: 1% 10%;
+}
+.foot{
+    background:url("https://www.mcbbs.net/template/mcbbs/image/bedrock.png");
+}
+.foot a{
+    color: #007aff;
+    text-decoration: none;
+    background: none;
+    font-style: italic;
+}
+.api{
+    font-size: 0.8em;
 }

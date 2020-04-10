@@ -24,13 +24,14 @@
 <!-- Swiper -->
 <div class="swiper-container" id="sc1" style="overflow-y: scroll">
     <div class="swiper-wrapper">
+        <!--搜索页-->
         <div class="swiper-slide" id="home-page">
             <!--侧边工具栏-->
             <div class="side-box-holder">
                 <!--占位DIV-->
                 <div class="place-45"></div>
                 <!--搜索框-->
-                <div id="search_bar" class="search_bar side-box" title="搜索">
+                <div id="search_bar" class="search_bar side-box search_open" title="搜索">
                         <span class="close" title="关闭搜索"></span>
                         <form action="https://www.baidu.com/baidu" target="_blank" method="get">
                             <input class="input"  type="text" name="wd" id="search" autocomplete="off">
@@ -72,6 +73,7 @@
                 </div>
             </div>
         </div>
+        <!--文章页-->
         <div class="swiper-slide read-light read" id="read">
             <div id="#error" class="error"></div>
             <!--一言-->
@@ -90,6 +92,7 @@
                 每日一文
             </div>
             <div class="mw-holder child-borders child-shadows " id="mw">
+                <!--内嵌Swiper-->
                     <div class="swiper-container" id="sc2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide scroll-warp mw" >
@@ -155,6 +158,20 @@
             </div>
         </div>
     </div>
+<!--footer-->
+<div class="foot">
+    <div class="footer">
+        <div class="copyright">
+            <span>©只影何归 2020</span><br>
+            <span>本页面所有内容版权归原作者所有</span><br>
+        </div>
+       <div class="api">
+           <span>每日一文<a href="https://meiriyiwen.com/" target="_blank">感谢每日一文API </a> </span>
+           <span>| 热搜·知乎日报·一言 <a href="https://alapi.cn/" target="_blank">感谢ALAPI</a></span>
+       </div>
+
+    </div>
+</div>
 <!-- Initialize Swiper -->
 <script src="js/initial.js"></script>
 </body>
