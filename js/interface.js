@@ -33,19 +33,36 @@ $.ajax({
     type:'post',
     dataType:'json',
     success:function (data) {
-        for (var i=0;i<3;i++){
-            $("#zhihu-daily").append(" <div  class=\"zhihu-box\" >\n" +
+        var j=0;
+        for (var i=0;i<data.data.stories.length;i++,j++){
+            if(j===3)
+                j=0;
+            var str= "<div  class=\"zhihu-box\" >\n" +
                 "                    <div class=\"card\" >\n" +
                 "                        <div class=\"card-body\">\n" +
                 "                            <h4 class=\"card-title\">"+data.data.stories[i].title+"</h4>\n" +
                 "                            <h5 class=\"card-subtitle\">"+data.data.stories[i].hint+"</h5>\n" +
                 "                            <button><a href='"+data.data.stories[i].url+"' target='_blank'>阅读</a></button>\n" +
                 "                        </div>\n" +
-                "                        <img alt='图片加载失败 请刷新重试' class=\"image-bottom\" src=\""+data.data.stories[i].images[0]+"\">\n" +
+                "                        <img alt='图片加载失败 请刷新重试' class=\"image-bottom\" src=\""+data.data.stories[i].images[0]+"\" width='100%' height='30%'>\n" +
+                "                    </div>\n" +
+                "                </div>";
+                    $(".col-log").eq(j).append(str);
+                }
+        for (var i=0;i<data.data.top_stories.length;i++,j++){
+            if (j===3)
+                j=0;
+            $(".col-log").eq(j).append(" <div  class=\"zhihu-box\" >\n" +
+                "                    <div class=\"card\" >\n" +
+                "                        <div class=\"card-body\">\n" +
+                "                            <h4 class=\"card-title\">"+data.data.top_stories[i].title+"</h4>\n" +
+                "                            <h5 class=\"card-subtitle\">"+data.data.top_stories[i].hint+"</h5>\n" +
+                "                            <button><a href='"+data.data.top_stories[i].url+"' target='_blank'>阅读</a></button>\n" +
+                "                        </div>\n" +
+                "                        <img alt='图片加载失败 请刷新重试' class=\"image-bottom\" src=\""+data.data.top_stories[i].image+"\" width='100%' height='30%'>\n" +
                 "                    </div>\n" +
                 "                </div>")
         }
-
     },
     error:function(xhr,textStatus,errorThrown){
         /*错误信息处理*/

@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>只影何归</title>
-    <link rel="stylesheet" href="css/trick.css">
-    <link rel="stylesheet" href="css/dily.css">
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="layui/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="css/search.css" type="text/css">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/swiper.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/APlayer.min.css">
+    <link rel="stylesheet" href="css/dily.css" type="text/css">
 
+    <script src="layui/layui.js" type="text/javascript"></script>
     <script src="//at.alicdn.com/t/font_1716017_dk710ckajq.js"></script>
     <script src="js/jquery_2.1.4.js" type="text/javascript"></script>
     <script src="js/search.js" type="text/javascript"></script>
     <script src="js/swiper.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
+<style>
+    .layui-tab-brief>.layui-tab-title .layui-this{
+        color: white;
+        background: #5FB878;
+        border-radius: 0;
+    }
+</style>
 
 </head>
 <body id="main">
@@ -133,44 +140,76 @@
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
 </div>
-
 <!--资讯页容器-->
-    <div class="zx-container">
-        <!--资讯页-->
-        <div class="zx">
-            <!--知乎日报-->
-            <div class="zx-holder clearfix">
-                <div class="zx-div child-borders child-shadows">
-                    <img src="https://daily.zhihu.com/img/new_home_v3/top_logo.png" >
-                </div>
-                <div class="zx-box-holder clearfix">
-                    <div class="zhihu-box-container clearfix" id="zhihu-daily" ></div>
-                </div>
-            </div>
-            <!--微博热搜-->
-            <div class="zx-holder clearfix">
-                <div class="zx-div child-shadows child-borders">
-                        <img src="img/weibo.png" style="background-color: white">
-                </div>
-                <div class="zx-box-holder">
-                    <div class="zhihu-box-container clearfix">
-                        <table class="wb table-hover">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>关键词</th>
-                                <th>热度</th>
-                            </tr>
-                            </thead>
-                            <tbody id="re-sou">
+<div class="zx-container">
+    <!--资讯页-->
+    <div class="zx">
+        <div class="layui-tab layui-tab-brief" lay-filter="zx">
+                    <!--导航内容-->
+                    <ul class="layui-tab-title zx-tab tabs">
+                        <li >综合</li>
+                        <li>科技</li>
+                        <li>资讯</li>
+                        <li class="layui-this">知识</li>
+                        <li>娱乐</li>
+                        <li>社区</li>
+                    </ul>
+                    <!--选项内容-->
+                    <div class="layui-tab-content">
+                        <!--热搜-->
+                        <div class="layui-tab-item ">
+                            <!--微博热搜-->
+                            <div class="zx-holder clearfix">
+                                <div class="zx-div child-shadows child-borders">
+                                    <img src="img/weibo.png" style="background-color: white">
+                                </div>
+                                <div class="zx-box-holder">
+                                    <div class="zhihu-box-container clearfix">
+                                        <table class="wb table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>关键词</th>
+                                                <th>热度</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="re-sou">
 
-                            </tbody>
-                        </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--科技-->
+                        <div class="layui-tab-item">
+                        </div>
+                        <!--资讯-->
+                        <div class="layui-tab-item">内容3</div>
+                        <!--知识-->
+                        <div class="layui-tab-item layui-show">
+                            <!--知乎日报-->
+                            <div class="zx-holder clearfix">
+                                <div class="zx-div child-borders child-shadows">
+                                    <img src="https://daily.zhihu.com/img/new_home_v3/top_logo.png" >
+                                </div>
+                                <div class="zx-box-holder clearfix">
+                                    <div class="zhihu-box-container clearfix">
+                                        <div class="col-log"></div>
+                                        <div class="col-log"></div>
+                                        <div class="col-log"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--娱乐-->
+                        <div class="layui-tab-item">内容3</div>
+                        <!--社区-->
+                        <div class="layui-tab-item">内容3</div>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
+</div>
 <!--footer-->
 <div class="foot">
     <div class="footer">
@@ -186,8 +225,8 @@
     </div>
 </div>
 <!-- Initialize Swiper -->
-<script src="js/initial.js"></script>
 </body>
+<script src="js/initial.js"></script>
 <script src="js/base.js" type="text/javascript"></script>
 <script src="js/interface.js" type="text/javascript"></script>
 <script src="js/mw.js"></script>

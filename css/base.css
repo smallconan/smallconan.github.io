@@ -223,11 +223,12 @@ body{
     z-index:1;
 }
 .zx-container{
+    margin:0;
     width: 100%;
     background-image: radial-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
 }
 .zx{
-    text-align: center;
+    margin: 0 ;
 }
 .zx-holder{
     width: 100%;
@@ -235,22 +236,20 @@ body{
     display: inline-block;
 }
 .zhihu-box {
-    width: 30%;
-    margin: 0 1%;
+    margin: 5% 0 ;
     text-align: left;
     white-space:normal;
     word-break:break-all;
     overflow:hidden;
-    float: left;
-    position: relative;
 }
 .zx-box-holder{
     width: 100%;
     display: inline-block;
 }
 .zhihu-box-container{
-    width:72%;
+    width:70%;
     padding: 0 0% 0 0%;
+    text-align: center;
 }
 .zhihu-logo{
     overflow: hidden;
@@ -263,15 +262,11 @@ body{
 .zx-div{
     padding: 2%;
 }
-.zx-box{
-    background: white;
-    width: 100%;
-    margin: 0 15%;
-}
 .wb{
    background: white;
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin: 0 10%;
 }
 .wb a{
     color: black;
@@ -295,6 +290,9 @@ body{
     text-decoration: none;
     background: none;
     font-style: italic;
+}
+.foot a:visited{
+    color: #007aff;
 }
 .api{
     font-size: 0.8em;
@@ -324,3 +322,31 @@ body{
     margin-top: 1%;
     text-align: right;
 }
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     }
+.tabs li {
+    height: 40px;!important;
+    line-height: 40px;!important;
+    padding: 0 15px;!important;
+    cursor: pointer;!important;
+    position: relative;!important;
+    font-size: 18px;!important;
+    color: #fff;!important;
+    transition: color 0.2s, height 0.2s, margin 0.2s;!important;
+    border-radius: 10px;!important;
+    position: relative;!important;
+}
+.col-log{
+    width: 33.33333333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    display: block
+}
+

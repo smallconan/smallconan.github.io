@@ -8,7 +8,6 @@ var mySwiper1 = new Swiper('#sc1', {
 });
 var swiper = new Swiper('#sc2', {
     direction: 'vertical',
-    nested: true,
     noSwiping:true
 });
 var is_swiper=document.getElementById("sc1");
@@ -29,3 +28,8 @@ $('#read').on('mousewheel',function (event) {
             mySwiper1.slidePrev(400,true);
     }
 });
+layui.use('element', function() {
+        var $ = layui.jquery
+            , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+    }
+);
