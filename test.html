@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"> </script>
+    <style>
+        .orig {
+            border-bottom-width: 0;
+            border-color: #ddd;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            color: #333;
+            font-family: 'Roboto',arial,sans-serif;
+            font-size: 23px;
+            margin: -4px 0 0;
+            overflow: auto;
+            padding-bottom: 2px;
+            padding-left: 16px;
+            padding-right: 90px;
+            resize: none;
+        }
+        textarea {
+            background-image: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        textarea {
+            -webkit-writing-mode: horizontal-tb !important;
+            text-rendering: auto;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            -webkit-appearance: textarea;
+            -webkit-rtl-ordering: logical;
+            flex-direction: column;
+            resize: auto;
+            cursor: text;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            margin: 0em;
+            font: 400 13.3333px Arial;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(169, 169, 169);
+            border-image: initial;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+<!--翻译-->
+<div class="translate-warp">
+    <!--要翻译的文字-->
+    <div style="float:left;">
+        <div >
+            <textarea type="text" id="t-value" class="orig "></textarea>
+        </div>
+    </div>
+    <div style="float: left">
+        <button type="button" value="翻译">翻译</button>
+    </div>
+    <!--翻译结果-->
+    <div style="float: left">
+        <div >
+            <textarea id="t-result" class="orig"></textarea>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+ $.ajax({
+     url:""
+ })
+</script>
+</html>

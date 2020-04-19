@@ -13,8 +13,8 @@ $(".box[title='YouTube']").click(function () {
 $(".box[title='google']").click(function () {
   window.open("https://translate.google.cn/")
 });
-$("#read-more").click(function () {
-  window.open("daily.html")
+$(".box[title='百度网盘']").click(function () {
+  window.open("https://pan.baidu.com/")
 });
 function mouse_is_in(e,div) {
   var x=e.clientX;
@@ -39,4 +39,31 @@ $(".bing").hover(function () {
     $(".bing-info").show();
 },function () {
     $(".bing-info").hide();
+});
+$(".translate").on('click',function () {
+  layui.use('layer', function(){
+    var layer = layui.layer;
+        layer.open({
+          type:1,
+          title:'翻译',
+          content:'<div class="translate-warp">\n' +
+              '    <!--要翻译的文字-->\n' +
+              '    <div style="float:left;height: 100%;width: 40%">\n' +
+              '       \n' +
+              '            <textarea type="text" id="t-value" class="orig "></textarea>\n' +
+              '        \n' +
+              '    </div>\n' +
+              '    <div style="float: left;width: 20%">\n' +
+              '        <button type="button" value="翻译">翻译</button>\n' +
+              '    </div>\n' +
+              '    <!--翻译结果-->\n' +
+              '    <div style="float: left;height: 100%;width: 40%">\n' +
+              '       \n' +
+              '            <textarea id="t-result" class="orig"></textarea>\n' +
+              '        \n' +
+              '    </div>\n' +
+              '</div>',
+          area:['60%','60%']
+        })
+  });
 });

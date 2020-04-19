@@ -9,19 +9,68 @@
     <link rel="stylesheet" href="css/base.css" type="text/css">
     <link rel="stylesheet" href="css/swiper.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/dily.css" type="text/css">
+
 
     <script src="layui/layui.js" type="text/javascript"></script>
-    <script src="//at.alicdn.com/t/font_1716017_dk710ckajq.js"></script>
-    <script src="js/jquery_2.1.4.js" type="text/javascript"></script>
+    <script src="https://at.alicdn.com/t/font_1716017_659ghpjc1vg.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"> </script>
     <script src="js/search.js" type="text/javascript"></script>
     <script src="js/swiper.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
+
+    <link rel="stylesheet" href="css/dily.css" type="text/css">
 <style>
     .layui-tab-brief>.layui-tab-title .layui-this{
         color: white;
         background: #5FB878;
         border-radius: 0;
+    }
+    .orig {
+        border-bottom-width: 0;
+        border-color: #ddd;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        color: #333;
+        font-family: 'Roboto',arial,sans-serif;
+        font-size: 23px;
+        margin: -4px 0 0;
+        overflow: auto;
+        padding-bottom: 2px;
+        padding-left: 16px;
+        padding-right: 90px;
+        resize: none;
+    }
+    textarea {
+        background-image: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    textarea {
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-appearance: textarea;
+        -webkit-rtl-ordering: logical;
+        flex-direction: column;
+        resize: auto;
+        cursor: text;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        margin: 0em;
+        font: 400 13.3333px Arial;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(169, 169, 169);
+        border-image: initial;
+        padding: 2px;
     }
 </style>
 
@@ -48,7 +97,8 @@
                     </div>
                 <div class="side-box blog" title="我的博客"></div>
                 <!--翻译功能-->
-                <div class="side-box translate" title="翻译"></div>
+                <div class="side-box translate" title="翻译">
+                </div>
             </div>
             <!--底部快捷导航栏-->
             <div class="web-box-holder">
@@ -77,14 +127,18 @@
                             <div class="box-title">YouTube</div>
                         </div>
                     </div>
+                    <div class="box-container">
+                        <div class="box" title="百度网盘">
+                            <div class="box-slogan"><img src="img/百度.png"> </div>
+                            <div class="box-title">百度网盘</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--图片版权-->
             <div class="bing">
-                <div class="bing-info" style="display: none">
-                    <div id="bing">
+                <div class="bing-info" style="display: none" id="bing">
 
-                    </div>
                 </div>
                 <div class="bing-logo">
                     <svg class="icon" aria-hidden="true" style="right: 0;">
@@ -199,6 +253,15 @@
                                         <div class="col-log"></div>
                                         <div class="col-log"></div>
                                     </div>
+                                </div>
+                            </div>
+                            <!--网络热词-->
+                            <div class="zx-box-holder clearfix">
+                                <div class="zx-div  child-shadows" >
+                                    <span>
+                                        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-reci"></use></svg>
+                                        网络热词
+                                    </span>
                                 </div>
                             </div>
                         </div>

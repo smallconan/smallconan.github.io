@@ -16,12 +16,6 @@ $('#home-page').on('mousewheel', function(event) {
     if(event.deltaY<0)
     mySwiper1.slideNext(400,true);
 });
-/*$("#home-page").on(('mouseover'),function () {
-    $("body").css({"overflow":"hidden"})
-});
-$("#home-page").on('mouseout',function () {
-    $("body").css({"overflow":"auto"})
-});*/
 $('#read').on('mousewheel',function (event) {
     if (!mouse_is_in(event,$("#mw"))){
         if(event.deltaY>0)
@@ -33,3 +27,4 @@ layui.use('element', function() {
             , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
     }
 );
+

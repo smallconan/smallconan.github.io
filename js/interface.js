@@ -102,6 +102,6 @@ $.ajax({
     dataType: 'json',
     async:true,
     success:function (data) {
-        $("#bing").html("<span><a href='"+data.data.bing+"' target=\"_blank\">"+data.data.copyright+"</a></span>")
+        $("#bing").html("<a href='"+data.data.bing+"' target=\"_blank\">"+data.data.copyright+"</a>")
     }
 });
